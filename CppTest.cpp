@@ -1,10 +1,10 @@
-#include <stdio.h>
+#include <iostream>
 
 extern "C" 
 {
     #include "lua.h"
     #include "lualib.h"
-    #include "lauxlib"
+    #include "lauxlib.h"
 }
 
 int main (int argc, char *argv[])

@@ -7,28 +7,15 @@ extern "C"
     #include "lauxlib.h"
 }
 
-//doing something
-int luaFactorial( lua_state* _state, int _num)
-{   
-    int ret;
-
-    lua_getglobal(_state, "fact");
-
-    return ret;
-}
-
-void initLua()
-{
-
-}
 
 int main (int argc, char *argv[])
 {
     //declare Lua State
     lua_State* state1 = luaL_newstate();
     //init Lua state
-    state1 = lua_open();
-
+    luaL_openlibs(state1);
+    // read and execute script
+    int ret = luaL_dofile(state1, "LuaTest.lua");
     //exit Lua State
     if(state1) lua_close(state1);
 

@@ -1,8 +1,12 @@
 print("hello world.")
 
 -- defines a factorial function
-function fact (n)
-    if n == 0 then
+function fact (n) 
+    -- check for decimal input which doesn't work with normal factorial
+    if math.ceil(n) > math.floor(n) then return "Too lazy to implement Gamma Function."
+    -- string return for errors
+    elseif n < 0 then return "Cannot calculate factorial : (-ve)!"
+    elseif n == 0 then
         return 1
     else
         return n * fact(n-1) -- recursion boys!

@@ -2,9 +2,16 @@
 
 extern "C" 
 {
+    //#include "/public/devel/2015/lua-5.3.3/src/lua.h"
+    //#include "/public/devel/2015/lua-5.3.3/src/lualib.h"
+    //#include "/public/devel/2015/lua-5.3.3/src/lauxlib.h"
+
+    
     #include "lua.h"
-    #include "lualib.h"
-    #include "lauxlib.h"
+	#include "lualib.h"
+	#include "lauxlib.h"
+
+    
 }
 
 

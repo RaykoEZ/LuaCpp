@@ -1,4 +1,4 @@
-print("hello world.")
+--print("hello world.")
 
 -- defines a factorial function
 function fact (n) 
@@ -11,8 +11,12 @@ function fact (n)
     else
         return n * fact(n-1) -- recursion boys!
     end
-    end
-    
-print("enter a number:")
-a = io.read("*number")        -- read a number
-print(fact(a))
+    return "invalid input"
+end
+
+function f (x, y)
+    return (x^2 * math.sin(y))/(1 - x)
+end
+--print("enter a number:")
+--a = io.read("*number")        -- read a number
+--print(fact(a))
